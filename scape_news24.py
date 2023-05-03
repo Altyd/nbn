@@ -1,11 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
+import json
 
-url = 'https://www.news24.com' # news24 website obviously
+url = 'https://www.news24.com'
 response = requests.get(url)
 soup = BeautifulSoup(response.content, 'html.parser')
 
 articles = soup.find_all('div', class_='article-item--container')
+
+data = []
 
 for article in articles:
     title_elem = article.find('div', class_='article-item__title')
@@ -16,8 +19,8 @@ for article in articles:
     if not link_elem:
         break
     link = link_elem['href']
-    print(title) #change this to save info to json file
-    print(link) #change this to save info to json file
+    article_data = {'title': title, 'link': link}
+    data.append(article_data)
 
-    #to do:
-    #save data to json folder
+with open('articles.json', 'w') as outfile:
+    json.dump(data, outfile, indent=4)
