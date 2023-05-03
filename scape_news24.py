@@ -19,7 +19,7 @@ for article in articles:
     if not link_elem:
         break
     link = link_elem['href']
-    article_data = {'title': title, 'link': link}
+    article_data = {'title': title, 'link': "https://www.news24.com/" + link}
     data.append(article_data)
 
 with open('articles.json', 'w') as outfile:
