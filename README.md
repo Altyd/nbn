@@ -10,7 +10,6 @@ Changing South Africa One Step At A Time
 - [Project Plan](#project-plan)
 - [Contributing](#contributing)
 - [Disclaimer](#disclaimer)
-- [License](#license)
 
 ## Introduction
 Welcome to the NBN (Non Biased News) project repository! This is a school project aimed at creating a platform to scrape news articles from a popular news website, process them, and present unbiased news stories to users.
@@ -58,6 +57,3 @@ Contributions to this project are welcome! If you have ideas for improvements, b
 
 ## Disclaimer
 This project is developed as a school project and may not accurately reflect real-world news standards. The goal is to provide a learning experience in web scraping, data processing, and unbiased content presentation.
-
-## License
-This project is licensed under the [MIT License](LICENSE).
